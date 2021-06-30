@@ -1,0 +1,117 @@
+Javascript.....
+
+scripting lang- > to make your HTML interactive (dynamic)
+modal boxes -> 
+	1. alert() - to show any msg / warning / error
+	2. confirm() - to take confirmation
+	3. promt() - to take i/p
+
+1. variables
+	to store data
+	till ES5 -> var
+	- global declaration 
+	ES6 -> let 
+	- local declaration ( block declaration)
+
+string
+number
+object
+Array
+boolean
+	UI -> radio button
+if(condtion 1){
+}
+else if(condition 2){
+}
+else if(condition 3){
+}
+else if(condition 4){
+}
+-----------------------------
+ UI -> check box
+if(condtion 1){
+}
+ if(condition 2){
+}
+ if(condition 3){
+}
+ if(condition 4){
+}
+
+
+ from ES6 -> use of let keyword,
+2. loop  
+	while()
+	do...while()
+	for()
+		1. inital value 2. condition 3. increment or decrement
+Aniket -10
+1 - initial value
+2
+3
+4
+5
+6
+7
+8
+9
+10 - with condition
+ increment by 1
+
+100 - 10   
+100
+95
+90
+85
+
+10
+
+i+=10;  -> i=i+10;
+i*=5;     -> i=i*5;
+i/=2;     -> i=i/2;
+
+
+3. conditional statments
+4. functions , build in function (string, numbers)
+5. array
+6. objects (class, constructor)
+7. JSON
+8. forms
+9. ES6 features (let, const, arrow function)
+
+Javascript / vbscript   -> 
+
+react , angular vue......
+
+1. react library - facebook    UI (browser)
+2. angular framework. google
+-------------------------------------------------
+3. node.js     -> backend   -> DB (mongo, RDBMS)
+4. java / web api / MVC REST
+5. php- >server
+
+client side & server side
+
+1. validataion
+2. process data to the server
+3. manage objects / JSON / array
+4. DOM (document (page) object model)  -> html tags , attributes, styles
+<input type="text" value="" id="" name=""/>
+      jquey -> javascript lib
+1. javascipt
+1. jquery ->html tags , attributes, styles
+5 BOM (browser object model) -> location, path, history (back,forward)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
