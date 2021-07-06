@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>function demo</title>
+        <script>
+            // DOM method
+            function addition(){
+                var a=document.getElementById("n1").value; // "10"
+                var b=document.getElementById("n2").value; // "20"
+                sum=parseFloat(a)+parseFloat(b); //   "10" => 10   "20"  => 20
+                document.getElementById("n3").value=sum;
+                document.getElementById("p1").innerHTML="Addition is "+sum;
+                // when you want to display data in side the htl tags
+            }
+            function check(){
+                var a=document.getElementById("r1").checked;
+                var b=document.getElementById("r2").checked;
+                var c=document.getElementById("r3").checked;
+                if(a==true){
+                    document.getElementById("d1").innerHTML="Your exp is 1 year";
+                }
+                else if(b==true){
+                    document.getElementById("d1").innerHTML="Your exp is 3-5 years";
+                }
+                else if(c==true){
+                    document.getElementById("d1").innerHTML="Your exp is 5-9 years";
+                }
+                else{
+                    document.getElementById("d1").innerHTML="please select experience option";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter number :<input type="number" id="n1"/><br>
+        Enter number :<input type="number" id="n2"/><br>
+        Result:<input type="text" id="n3"/><br><br>
+        <input type="button" value="Addition" onclick="addition()"/> <br>
+        Select Experience :
+        <!--name attribute work as group-->
+        <input type="radio" id="r1" name="exp"/>1 year
+        <input type="radio" id="r2" name="exp"/>3-5 years
+        <input type="radio" id="r3" name="exp"/>5-9 years
+        <br>
+        Select Gender :
+        <!--name attribute work as group-->
+        <input type="radio" id="r4" name="gen"/>Male
+        <input type="radio" id="r5" name="gen"/>Female
+       
+        <br>
+        <br>
+        select Hobbies:
+        <input type="checkbox" id="c1"/> sports
+        <input type="checkbox" id="c2"/> Music
+        <input type="checkbox" id="c3"/> reading
+        <input type="checkbox" id="c4"/> technology 
+        <input type="button" value="check" onclick="check()"/>
+        <p id="p1">
+            Addition will be displayed here..
+        </p>
+        <div id="d1">
+            This is sample text
+        </div>
+        <!-- based on event -->
+        <!-- .value  -> get or set from input type
+.cheked -> radio / checkbox
+.innerHTML -> set or get value from any html tag -->
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

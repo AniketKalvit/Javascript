@@ -1,0 +1,25 @@
+function in javascript
+
+function ->
+it is used to exe a perticular task.....
+block of code
+
+user want addition of 2 numbers
+
+1. what is the functionality - > addition
+2. need 2 variables to store data
+3. need 1 variable to store result /sum
+--------------------------------------------------------
+this function does not have parameters(accept) and return type
+function addition(){
+var a,b,sum;
+a=10;b=20;
+sum=a+b;
+document.write(sum);
+}
+
+addition(); // call a function
+
+
+
+
