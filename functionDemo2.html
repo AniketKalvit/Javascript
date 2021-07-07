@@ -12,21 +12,25 @@
                 // when you want to display data in side the htl tags
             }
             function check(){
-                var a=document.getElementById("r1").checked;
-                var b=document.getElementById("r2").checked;
-                var c=document.getElementById("r3").checked;
+                var a=document.getElementById("c1").checked;
+                var b=document.getElementById("c2").checked;
+                var c=document.getElementById("c3").checked;
+                var d=document.getElementById("c4").checked;
+                var data="";
+                var msg="You have selected ";
                 if(a==true){
-                    document.getElementById("d1").innerHTML="Your exp is 1 year";
+                    data+="Sports ";
                 }
-                else if(b==true){
-                    document.getElementById("d1").innerHTML="Your exp is 3-5 years";
+                if(b==true){
+                    data+="Music ";
                 }
-                else if(c==true){
-                    document.getElementById("d1").innerHTML="Your exp is 5-9 years";
+                if(c==true){
+                    data+="Reading ";
                 }
-                else{
-                    document.getElementById("d1").innerHTML="please select experience option";
+                if(d==true){
+                    data+="Technology";
                 }
+                document.getElementById("d1").innerHTML=msg+data;
             }
         </script>
     </head>

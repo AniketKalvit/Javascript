@@ -1,0 +1,42 @@
+<html>
+    <head>
+       
+
+    </head>
+    <body>
+        <div id="d1"></div>
+
+        <script>
+//             1. push() - add element in the list at the end
+// 2. pop()  - remove element which is last in the list
+// 3. unshift () - add element in the list at first position
+// 4. shift() - remove element which is first in the list
+            //            0      1      2       3       4       5
+            var colors=["red","green","blue","black","white","pink"];
+
+            colors.push("purple");
+            colors.unshift("gray");
+
+            colors.pop();
+            colors.shift();
+            var data="<ul type='circle'>";
+                // i=0 ; i<5;i++
+            for(var i=0;i<colors.length;i++){ // 5 length will returns num of elements in the list
+                    data+="<li>"+colors[i]+"</li>";
+            }
+            data+="</ul>";
+            document.getElementById("d1").innerHTML=data;
+
+            //using forEach()
+                // c- > each element in the array
+                // i   -> index of each element
+                // colors -> points to array variable name ( whole array)
+            colors.forEach(function(c,i,colors){
+                document.write(i+" "+c+"<br>");
+            })
+            //console.log(data);
+
+            
+        </script>
+    </body>
+</html>
