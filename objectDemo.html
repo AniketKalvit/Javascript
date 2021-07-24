@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            var product={
+                code:1,
+                name:'Mobile',
+                price:34000,
+                desc:'Apple 10 phone',
+                details:function(){  // anonious function
+                    return "Product name is "+this.name+" and price is "+this.price;
+                },
+                details1:function(){
+                    return "Product name is "+this.name+" and desc "+this.desc;
+                }
+            }
+            document.write(JSON.stringify(product));
+
+            function add(){
+                
+            }
+        </script>
+    </head>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+        //  var prog=[
+        //      {id:1,name:'javascript',ischecked:false},
+        //      {id:2,name:'C++',ischecked:false},
+        //      {id:3,name:'Angular',ischecked:false},
+        //  ];
+         function selectAll(){
+            document.getElementById("p1").checked=true;
+            document.getElementById("p2").checked=true;
+            document.getElementById("p3").checked=true;
+         }
+         function deselectAll(){
+            document.getElementById("p1").checked=false;
+            document.getElementById("p2").checked=false;
+            document.getElementById("p3").checked=false; 
+         }
+         function submit(){
+             var data='';
+             if(document.getElementById("p1").checked==true){
+                 data+='javascript';
+             }
+             if(document.getElementById("p2").checked==true){
+                 if(data==''){
+                    data+='C++'
+                 }
+                 else{
+                    data+=','+ 'C++';
+                 }
+                 
+             }
+             if(document.getElementById("p3").checked==true){
+                if(data==''){
+                 data+='Angular';
+                }
+                else{
+                    data+=','+'Angular';
+                }
+             }
+             document.getElementById("para1").innerHTML=data;
+         }
+        </script>
+    </head>
+    <body>
+        <input type="checkbox" id="p1"> javascript
+        <input type="checkbox" id="p2"> C++
+        <input type="checkbox" id="p3"> Angular
+        <button onclick="selectAll()">Check All</button>
+        <button onclick="deselectAll()">Uncheck All</button>
+        <button onclick="submit()">Submit</button>
+        <p id="para1">
+
+        </p>
+    </body>
+</html>
