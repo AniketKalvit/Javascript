@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <script>
+                    //1-----------5-----------9
+            var num=10.879;
+            var str="  This is my sample text  ";
+            //var newstr=str.slice(9,20); // last index value wil be not included in the new string
+            var newstr=str.slice(7);
+        document.getElementById("d1").innerHTML=str.indexOf('e'); // first 
+       document.getElementById("d2").innerHTML=str.lastIndexOf('e'); //last
+       //document.getElementById("d3").innerHTML=str.indexOf('i',3);
+       document.getElementById("d4").innerHTML=newstr;
+
+       document.getElementById("d3").innerHTML=str.replace(/e/g,'a');
+            //trim() - remove space from left and right side of string
+           // alert(num.toString()); // convert number to string
+           document.write(num.toFixed(2)); // fixed the dight after pricision & roundoff the value
+        </script>
+    </body>
+</html>
