@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <input type="button" value="Previous Page" onclick="fun1()"/>
+        <input type="button" value="Next page" onclick="fun2()"/>
+        <script>
+
+            var href=window.location.href;
+            document.write(href);
+
+            var url=window.location.url;
+            document.write("<br>"+url);
+
+            var hostName=window.location.pathname;
+
+            
+            document.write("<br>"+hostName);
+           function fun1()
+            {
+                history.back();
+            }
+            function fun2()
+            {
+                history.forward();
+            }
+        </script>
+    </body>
+</html>

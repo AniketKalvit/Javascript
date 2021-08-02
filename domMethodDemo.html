@@ -1,0 +1,44 @@
+<html>
+    <style>
+        
+    </style>
+    <body>
+        <input type="button" value="Show" onclick="showData()"/>
+        <input type="button" value="Hide" onclick="hideData()"/>
+        <p>This is my sample para 1</p>
+        <p class="test">This is my sample para 2</p>
+        <p>This is my sample para 3</p>
+        <p>This is my sample para 4</p>
+
+        <div class="test">div 1</div>
+        <div class="test">div 2</div>
+        <div class="test">div 3</div>
+
+        <div id="d1">Thi is sample text in div tag</div>
+        <script>
+        var para=document.getElementsByTagName("p");
+        //document.write(para);
+        para[0].style.color="red";
+        para[2].style.fontSize="20px";
+        para[2].style.color="green";
+        console.log(para[2].innerHTML);
+
+        var cls=document.getElementsByClassName("test");
+       cls[0].innerHTML="I have changed the content";
+
+       for(var i=0;i<cls.length;i++){
+        cls[i].style.color="blue";
+        cls[i].style.fontSize="20px";
+       }
+       
+       function showData()
+       {
+        document.getElementById("d1").style.display="block";
+       }
+       function hideData()
+       {
+        document.getElementById("d1").style.display="none";
+       }
+        </script>
+    </body>
+</html>

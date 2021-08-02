@@ -1,0 +1,67 @@
+<html>
+    <body>
+        <div id="d1"></div>
+    <script>
+
+        var studList=[
+            {
+                rollNo:1,
+                name:'Test',
+                math:89,
+                sci:88,
+                eng:77,
+                total:0,
+                avg:0.0,
+                grade:'NA'
+            },
+            {
+                rollNo:1,
+                name:'Test',
+                math:59,
+                sci:48,
+                eng:47,
+                total:0,
+                avg:0.0,
+                grade:'NA'
+            },
+            {
+                rollNo:1,
+                name:'Test',
+                math:19,
+                sci:18,
+                eng:17,
+                total:0,
+                avg:0.0,
+                grade:'NA'
+            }
+        ]
+    studList.forEach(x=>{
+        x.total=x.math+x.sci+x.eng;
+        x.avg=x.total/3;
+        x.avg=x.avg.toFixed(2);
+        if(x.avg>=75){
+            x.grade="A"
+        }
+        if(x.avg>=60 && x.avg<75){
+            x.grade="B"
+        }
+        if(x.avg>=35 && x.avg<60){
+            x.grade="C"
+        }
+        if(x.avg<35){
+            x.grade="FAIL"
+        }
+    })
+    console.log(studList)
+    var data="<table border='1'><tr><th>Roll No</th><th>name</th><th>Math</th><th>Sci</th><th>Eng</th><th>Total</th><th>Avg</th><th>Grade</th></tr>";
+    for(var i=0;i<studList.length;i++){
+        data+="<tr><td>"+studList[i].rollNo+"</td><td>"+studList[i].name+"</td><td>"+studList[i].math+"</td><td>"+studList[i].sci+"</td><td>"+studList[i].eng+
+            "</td><td>"+studList[i].total+"</td><td>"+studList[i].avg+"</td><td>"+
+                studList[i].grade+"</td></tr>";
+    }
+    data+="</table>";
+    document.getElementById('d1').innerHTML=data;
+
+    </script>
+    </body>
+</html>
