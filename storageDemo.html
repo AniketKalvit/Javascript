@@ -1,0 +1,27 @@
+<html>
+    <body>
+        Enter name:<input type="text" id="name"/>
+        <input type="button" value="Save" onclick="saveName()"/>
+        <input type="button" value="Get Name" onclick="getName()"/>
+        <input type="button" value="Remove" onclick="removeName()"/>
+        <script>
+            function saveName()
+            {
+                var num=2021;
+                var nm=document.getElementById("name").value;
+                sessionStorage.setItem("username",nm);
+            }
+            function getName()
+            {
+               document.getElementById("name").value=sessionStorage.getItem("username");
+            }
+            function removeName()
+            {
+                sessionStorage.removeItem("username"); // remove single value which key is provided
+               // clear method is used to clear all values from localStorage
+              // localStorage.clear(); 
+              
+            }
+        </script>
+    </body>
+</html>
