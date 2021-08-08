@@ -1,0 +1,63 @@
+<html>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <script>
+    // var a=10;
+    // var b=20;
+    // const pi=3.14; // constant value through out program, needs initial value
+    // const maxMarks=150;
+    // function test(){
+    // let a=12;
+    // console.log(pi);
+    // }
+   
+    // test();
+
+    // // normal function
+    // function add(a,b){
+    //     return a+b;
+    // }
+
+    // // arrow function     
+    // // left side of => is input
+    // // right side of => is output
+    // const sum=(a,b)=>a+b;
+    
+    // document.getElementById("d1").innerHTML=sum(10,20);
+    // function square(a){
+    //     return a*a;
+    // }
+    // // arrow operator       
+    // const result= a =>a*a;
+    // document.getElementById("d2").innerHTML=result(10);
+    
+        const colors=['green','blue','red'];
+        let data="";
+
+        // for(let i=0;i<colors.length;i++)
+        // {
+        //     data+=colors[i]+" ";
+        // }
+
+        for(let value of colors)
+        {
+            data+=value+" ";
+        }
+
+        // 1. for can have condition but for of does not have condition
+        // 2. for works with index , for of work with value
+        // 3. use if for of -> you want to interate through array / list
+        document.getElementById("d1").innerHTML=data;
+ 
+        // role='user' default or optional parameter
+        function isSignup(username,pass,role='user')
+        {
+
+        }
+
+            isSignup('abc',123);
+            isSignup('xyz',123,'admin');
+        </script>
+    </body>
+</html>
