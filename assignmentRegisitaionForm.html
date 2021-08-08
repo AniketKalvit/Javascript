@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Form validations</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/assignmentForm.css">
+      <body>
+         <div class="container">
+            <form  action="assignmentLoginForm.html" method="POST" name="Registerform" >
+               <h2 class="text-primary">REGISTER FORM</h2>
+               <div class="form-group">
+                  <label class="label-txt">ENTER YOUR NAME</label>
+                  <input type="text" class="form-control" name="user" id="name">
+                  <span id="userError" class="text-danger"></span>  
+               </div>
+                  <div class="form-group">
+                  <label class="label-txt">ENTER YOUR MOBILE</label>
+                  <input type="text" class="form-control" name="mobile" id="mobile">
+                  <span id="mobileNo" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                  <label class="label-txt">ENTER YOUR EMAIL</label>
+                  <input type="text" class="form-control" name="email" id="email">
+                  <span id="emailError" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                  <label class="label-txt">ENTER YOUR PASSWORD</label>
+                  <input type="password" class="form-control" name="pass" id="pass">
+                  <span id="passError" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                  <label class="label-txt">ENTER CONFORM PASSWORD</label>
+                  <input type="password" class="form-control" name="cpass" id="cpass">
+                  <span id="cpassError" class="text-danger"></span> 
+               </div>
+                <div class="form-group">
+                  <input type="checkbox" class=""> I agree to the this Terms and conditions
+               </div>
+               <input type="submit" value="submit" onclick="return validation();" name="submit" class="btn btn-primary"
+                >
+
+            </form>
+         </div>
+
+         <script type="text/javascript">
+            function validation(){
+               var userName=document.getElementById('name').value;
+               var mobileNum=document.getElementById('mobile').value;
+               var password=document.getElementById('pass').value;
+               localStorage.setItem("pass",password);
+               var cpassword=document.getElementById('cpass').value;
+               var useremail=document.getElementById('email').value;
+               localStorage.setItem("emailId",useremail);
+
+               //username
+               if (userName=="") {
+                  document.getElementById('userError').innerHTML="**Plese fill the user Field";
+                  return false;
+               }
+               //  if ((userName.length<=2) || (userName.length > 20)) {
+               //   document.getElementById('userError').innerHTML="Length must be between 1 to 20";
+               //   return false;
+               //  }
+               //  if (!isNaN(userName)) {
+               //    document.getElementById('userError').innerHTML="Only Charcter are allowed";
+               //    return false;
+               //  }
+
+                //mobile number
+                if (mobileNum=="") {
+                  document.getElementById('mobileNo').innerHTML="**Please fill the mobile number"
+                  return false;
+                }
+               //  if (isNaN(mobileNum)) {
+               //     document.getElementById('mobileNo').innerHTML="User must right number";
+               //     return false;
+               //  }
+               //  if (mobileNum.length!=10) {
+               //    document.getElementById('mobileNo').innerHTML="fill number must be 10 digit";
+               //    return false;
+               //  }
+
+               //  //Emailid
+                if (useremail=="") {
+                  document.getElementById('emailError').innerHTML="**please fill email id filed";
+                  return false;
+                }
+               //  if (useremail.indexOf('@')<=0) {
+               //    document.getElementById('emailError').innerHTML="**@invalid possion";
+               //    return false;
+               //  }
+               //  if ((useremail.charAt(useremail.length-4)!='.')&&(useremail.charAt(useremail.length-3)!='.')) {
+               //    document.getElementById('emailError').innerHTML=".invalid position";
+               //    return false;
+               //  }
+
+               //  //password
+                if (password=="") {
+                  document.getElementById('passError').innerHTML="**please fill the password field";
+                  return false;
+                }
+               //  if ((password.length<=5)||(password.length>20)) {
+               //    document.getElementById('cpassError').innerHTML="**password length must be 5 to 20";
+               //    return false;
+               //  }
+
+               //  //conform password
+                if (cpassword=="") {
+                  document.getElementById('cpass').innerHTML="**please fill the password field";
+                  return false;
+                }
+                if (password!=cpassword) {
+                  document.getElementById('cpass').innerHTML="**password not matching";
+                  return false;
+                }
+                
+                window.location="assignmentLoginForm.html";
+            }
+            function redirectLogin(){
+               
+            }
+         </script>
+      </body>
+   </html>

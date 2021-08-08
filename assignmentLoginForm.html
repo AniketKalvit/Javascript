@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Form validations</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/assignmentForm.css">
+      <body>
+         <div class="container">
+            <form  action="#" name="Registerform" onsubmit="return validation()">
+               <h2 class="text-primary">Login</h2>
+               
+               <div class="form-group">
+                  <label class="label-txt">ENTER YOUR EMAIL</label>
+                  <input type="text" class="form-control" name="email" id="email">
+                  <span id="emailError" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                  <label class="label-txt">ENTER YOUR PASSWORD</label>
+                  <input type="password" class="form-control" name="pass" id="pass">
+                  <span id="passError" class="text-danger"></span>
+               </div>
+               
+               <input type="button" value="LOGIN" onclick="validation()" name="submit" class="btn btn-primary">
+
+            </form>
+         </div>
+
+         <script type="text/javascript">
+            function validation(){ 
+               var password=document.getElementById('pass').value;  
+               var useremail=document.getElementById('email').value;
+               var pass=localStorage.getItem("pass");        
+               var email=localStorage.getItem("emailId");  
+               
+               if(email==useremail && password==pass)
+               {
+                  alert('success');
+               }
+               else
+               {
+                  alert('Fail');
+               }
+            }
+         </script>
+      </body>
+   </html>

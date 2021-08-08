@@ -1,0 +1,35 @@
+body {
+  background: #C5E1A5;
+}
+form {
+  width: 60%;
+  margin: 60px auto;
+  background: #efefef;
+  padding: 60px 120px 80px 120px;
+  text-align: left;
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+label {
+  display: block;
+  position: relative;
+  margin: 8px 0px;
+}
+.container h2{  font-family: sans-serif; margin-bottom: 15px;}
+.form-group{ margin-bottom: 20px;}
+.label-txt {
+  text-align: left;
+  font-family: sans-serif;
+  font-size: .8em;
+  letter-spacing: 1px;
+  color: rgb(120,120,120);
+  transition: ease .3s;
+}
+.form-control {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #BCBCBC;
+}
+
+.form-control:focus{ background: transparent; box-shadow: 0 0 0 0.15rem rgb(13 110 253 / 25%); }
